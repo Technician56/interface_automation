@@ -1,0 +1,3 @@
+- ["name", "grant_type", "appid", "secret", "assert"]
+- ["获取鉴权码access token接口", "client_credential", "wx1d369be0180ad357", "5a5615a2223e4295e9f4e153e2667b87", "access_token"]
+- ["appid为空", "client_credential", "", "5a5615a2223e4295e9f4e153e2667b87", 41002]

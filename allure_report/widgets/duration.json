@@ -1,0 +1,91 @@
+[ {
+  "uid" : "f24c9b977339bd1e",
+  "name" : "test_get_tags[case_info0]",
+  "time" : {
+    "start" : 1652662796724,
+    "stop" : 1652662796866,
+    "duration" : 142
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "501f253d5691995d",
+  "name" : "test_sign[case_info1]",
+  "time" : {
+    "start" : 1652662796532,
+    "stop" : 1652662796571,
+    "duration" : 39
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f8ad921ca3ba4a5f",
+  "name" : "test_file_upload[case_info0]",
+  "time" : {
+    "start" : 1652662797292,
+    "stop" : 1652662797573,
+    "duration" : 281
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a1b5ecba29c5cf26",
+  "name" : "test_get_access_token[case_info0]",
+  "time" : {
+    "start" : 1652662796573,
+    "stop" : 1652662796680,
+    "duration" : 107
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5a556d0b1e8bb5d0",
+  "name" : "test_create_tag[case_info0]",
+  "time" : {
+    "start" : 1652662796870,
+    "stop" : 1652662797011,
+    "duration" : 141
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "358ad952684775a5",
+  "name" : "test_delete_tag[case_info0]",
+  "time" : {
+    "start" : 1652662797134,
+    "stop" : 1652662797289,
+    "duration" : 155
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7ddab54ae0fc63cd",
+  "name" : "test_get_access_token[case_info1]",
+  "time" : {
+    "start" : 1652662796682,
+    "stop" : 1652662796722,
+    "duration" : 40
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "49d473e000dc0c2b",
+  "name" : "test_sign[case_info0]",
+  "time" : {
+    "start" : 1652662796246,
+    "stop" : 1652662796530,
+    "duration" : 284
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2a424d692ea4cd17",
+  "name" : "test_edit_tag[case_info0]",
+  "time" : {
+    "start" : 1652662797013,
+    "stop" : 1652662797132,
+    "duration" : 119
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

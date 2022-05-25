@@ -1,0 +1,130 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "test_sign[case_info0]",
+    "uid" : "49d473e000dc0c2b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652662796246,
+      "stop" : 1652662796530,
+      "duration" : 284
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '获取鉴权码access token接口', 'base_url': 'base_wechat_url', 'parametrize': {'name-grant_type-appid-secret-assert': './datas/sign_api_datas/sign_data.yaml'}, 'request': {'url': '/cgi-bin/token?a=1&b=2', 'method': 'get', 'params': {'grant_type': 'client_credential', 'appid': 'wx1d369be0180ad357', 'secret': '5a5615a2223e4295e9f4e153e2667b87'}, 'headers': {'sign': ''}}, 'extract': {'access_token': '\"access_token\":\"(.*?)\"', 'expires_in': '$.expires_in'}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 'access_token'}]}" ]
+  }, {
+    "name" : "test_sign[case_info1]",
+    "uid" : "501f253d5691995d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652662796532,
+      "stop" : 1652662796571,
+      "duration" : 39
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': 'appid为空', 'base_url': 'base_wechat_url', 'parametrize': {'name-grant_type-appid-secret-assert': './datas/sign_api_datas/sign_data.yaml'}, 'request': {'url': '/cgi-bin/token?a=1&b=2', 'method': 'get', 'params': {'grant_type': 'client_credential', 'appid': '', 'secret': '5a5615a2223e4295e9f4e153e2667b87'}, 'headers': {'sign': ''}}, 'extract': {'access_token': '\"access_token\":\"(.*?)\"', 'expires_in': '$.expires_in'}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 41002}]}" ]
+  }, {
+    "name" : "陶朝盛-项目",
+    "children" : [ {
+      "name" : "微信公众平台项目",
+      "children" : [ {
+        "name" : "test_get_access_token[case_info0]",
+        "uid" : "a1b5ecba29c5cf26",
+        "parentUid" : "a46fa4a2fe75703ca0ec3f41692427d6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652662796573,
+          "stop" : 1652662796680,
+          "duration" : 107
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'name': '获取鉴权码access token接口', 'base_url': 'base_wechat_url', 'parametrize': {'name-grant_type-appid-secret-assert': './datas/wechat_api_datas/get_access_token_data.yaml'}, 'request': {'url': '/cgi-bin/token', 'method': 'get', 'params': {'grant_type': 'client_credential', 'appid': 'wx1d369be0180ad357', 'secret': '5a5615a2223e4295e9f4e153e2667b87'}}, 'extract': {'access_token': '\"access_token\":\"(.*?)\"', 'expires_in': '$.expires_in'}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 'access_token'}]}" ]
+      }, {
+        "name" : "test_get_access_token[case_info1]",
+        "uid" : "7ddab54ae0fc63cd",
+        "parentUid" : "a46fa4a2fe75703ca0ec3f41692427d6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652662796682,
+          "stop" : 1652662796722,
+          "duration" : 40
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'name': 'appid为空', 'base_url': 'base_wechat_url', 'parametrize': {'name-grant_type-appid-secret-assert': './datas/wechat_api_datas/get_access_token_data.yaml'}, 'request': {'url': '/cgi-bin/token', 'method': 'get', 'params': {'grant_type': 'client_credential', 'appid': '', 'secret': '5a5615a2223e4295e9f4e153e2667b87'}}, 'extract': {'access_token': '\"access_token\":\"(.*?)\"', 'expires_in': '$.expires_in'}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 41002}]}" ]
+      }, {
+        "name" : "test_get_tags[case_info0]",
+        "uid" : "f24c9b977339bd1e",
+        "parentUid" : "a46fa4a2fe75703ca0ec3f41692427d6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652662796724,
+          "stop" : 1652662796866,
+          "duration" : 142
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'name': '获取公众号已创建的标签接口', 'base_url': 'base_wechat_url', 'request': {'url': '/cgi-bin/tags/get?access_token=${get_extract_value(access_token)}', 'method': 'get'}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 'tags'}]}" ]
+      }, {
+        "name" : "test_create_tag[case_info0]",
+        "uid" : "5a556d0b1e8bb5d0",
+        "parentUid" : "a46fa4a2fe75703ca0ec3f41692427d6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652662796870,
+          "stop" : 1652662797011,
+          "duration" : 141
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'name': '创建标签接口', 'base_url': 'base_wechat_url', 'request': {'url': '/cgi-bin/tags/create?access_token=${get_extract_value(access_token)}', 'method': 'post', 'json': {'tag': {'name': '小帅哥${get_random_number(1000,9999)}'}}}, 'extract': {'id': '$.tag.id'}, 'validate': [{'equals': {'status_code': 200}}, {'equals': {'id': '${get_extract_value(id)}'}}]}" ]
+      }, {
+        "name" : "test_edit_tag[case_info0]",
+        "uid" : "2a424d692ea4cd17",
+        "parentUid" : "a46fa4a2fe75703ca0ec3f41692427d6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652662797013,
+          "stop" : 1652662797132,
+          "duration" : 119
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'name': '编辑标签接口', 'base_url': 'base_wechat_url', 'request': {'url': '/cgi-bin/tags/update?access_token=${get_extract_value(access_token)}', 'method': 'post', 'json': {'tag': {'id': '${get_extract_value(id)}', 'name': 'change${get_random_number(11,10000)}'}}}, 'validate': [{'equals': {'status_code': 200}}, {'equals': {'errmsg': 'ok'}}]}" ]
+      }, {
+        "name" : "test_delete_tag[case_info0]",
+        "uid" : "358ad952684775a5",
+        "parentUid" : "a46fa4a2fe75703ca0ec3f41692427d6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652662797134,
+          "stop" : 1652662797289,
+          "duration" : 155
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'name': '删除标签接口', 'base_url': 'base_wechat_url', 'request': {'url': '/cgi-bin/tags/delete?access_token=${get_extract_value(access_token)}', 'method': 'post', 'json': {'tag': {'id': '${get_extract_value(id)}'}}}, 'validate': [{'equals': {'status_code': 200}}, {'equals': {'errmsg': 'ok'}}]}" ]
+      }, {
+        "name" : "test_file_upload[case_info0]",
+        "uid" : "f8ad921ca3ba4a5f",
+        "parentUid" : "a46fa4a2fe75703ca0ec3f41692427d6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652662797292,
+          "stop" : 1652662797573,
+          "duration" : 281
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'name': '文件上传接口', 'base_url': 'base_wechat_url', 'request': {'url': '/cgi-bin/media/uploadimg?access_token=${get_extract_value(access_token)}', 'method': 'post', 'files': {'media': 'H://head.jpg'}}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 'url'}]}" ]
+      } ],
+      "uid" : "a46fa4a2fe75703ca0ec3f41692427d6"
+    } ],
+    "uid" : "b755493d66b8d40f623182761a8d6334"
+  } ]
+}

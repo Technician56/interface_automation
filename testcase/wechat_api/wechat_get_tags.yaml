@@ -1,0 +1,9 @@
+-
+  name: 获取公众号已创建的标签接口
+  base_url: base_wechat_url
+  request:
+    url: /cgi-bin/tags/get?access_token=${get_extract_value(access_token)}
+    method: get
+  validate:
+    - equals: {status_code: 200}
+    - contains: tags

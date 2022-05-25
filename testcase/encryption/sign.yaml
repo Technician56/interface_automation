@@ -1,0 +1,20 @@
+-
+  name: $ddt{name}
+  base_url: base_wechat_url
+  parametrize:
+    name-grant_type-appid-secret-assert: ./datas/sign_api_datas/sign_data.yaml
+  request:
+    url: /cgi-bin/token?a=1&b=2
+    method: get
+    params:
+      grant_type: $ddt{grant_type}
+      appid: $ddt{appid}
+      secret: $ddt{secret}
+    headers:
+      sign: ""
+  extract:
+    access_token: '"access_token":"(.*?)"'
+    expires_in: $.expires_in
+  validate:
+    - equals: {status_code: 200}
+    - contains: $ddt{assert}

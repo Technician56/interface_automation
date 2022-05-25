@@ -1,0 +1,24 @@
+# 基础路径
+base:
+    base_wechat_url: https://api.weixin.qq.com
+    base_phpwind_url: http://47.107.116.139
+    base_encryption_url: http://127.0.0.1:5000
+
+# 配置日志属性
+# 日志路径、日志级别、日志格式、过滤器、过滤级别、过滤内容
+logger:
+    path: /log
+    formatter: "%(asctime)s_%(funcName)s_第%(lineno)d行_%(levelname)s:%(message)s"
+    datefmt: "%Y:%m:%d %H:%M:%S"
+    log_level: INFO
+    filter_level:
+    filter_msg:
+
+#签名配置
+sign:
+    appid: admin
+    appsecret: 123
+
+
+
+

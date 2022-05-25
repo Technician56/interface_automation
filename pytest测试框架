@@ -1,0 +1,369 @@
+1. pytest运行规则
+ 1.1 pytest常用的插件
+    pytest                  本身
+    pytest-html             生成简易的HTML报告
+    pytest-xdist            多线程
+    pytest-rerunfailures    失败用例重跑
+    pytest-ordering         修改测试用例的执行顺序
+    pytest-base-url         基础路径管理
+    allure-pytest           生成测试报告
+
+ 1.2 pytest单元框架主要用来做什么
+    ① 发现测试用例
+    ② 执行测试用例
+    ③ 判断测试结果
+    ④ 生成测试报告
+
+ 1.3 pytest默认的测试用例规则
+    1) 模块名(py文件)必须以 test_ 开头 或者以 _test 结尾
+    2) 测试类必须以 Test_开头,并且不能有__init__方法(初始化方法)
+    3) 测试用例必须以test开头
+
+ 1.4 pytest用例运行方式以及参数
+    指定模块运行: pytest -vs path(例:./Interface_automation/pytest01/test_pytest.py)
+    指定文件运行: pytest -vs path(例:./Interface_automation/pytest01)
+    指定类/用例运行: pytest -vs path(例: ./Interface_automation/pytest01/test_pytest.py::TestPytest::test_get_access_token)
+    参数:
+        -vs:
+          -v        输出更详细的用例信息
+          -s        输出用例中的调试信息
+        -n:         多线程运行
+        --reruns:   失败用例重跑
+        -x:         一旦出现一个用例失败，中止测试
+        --maxfail:  用例失败的次数达到指定次数后中止测试
+        --html:     生成简易的测试报告
+        -k:         执行包含有指定字符串的用例
+        -m:         执行对应标签的用例
+
+ 1.5 运行模式
+    ① 主函数模式运行
+    pytest.main(["-vs", "-n=2", ...])
+    ② 基于 pytest.ini 配置文件运行
+        [pytest]
+        addopts : 命令行参数(主函数或命令行模式运行时使用该参数)
+        testpaths : 执行测试用例的路径
+        python_files : 指定测试模块的名称规则
+        python_classes : 指定测试类的名称规则
+        python_functions : 指定测试用例的名称规则
+        markers: 测试用例的标签  -m
+            smoke : 冒烟测试 (标签名)
+            user_manage : 用户管理用例
+        使用标记时必须要在用例前面加上标记
+    ③ 命令行模式运行
+
+ 1.6 跳过测试用例
+    ① 无条件跳过
+        @pytest.mark.skip(reason="reason")
+    ② 有条件跳过
+        @pytest.mark.skipif( a > 10, reason="a can't bigger than 10")
+
+ 1.7 pytest测试用例的前后置
+    ① 在类的前面执行的操作: setup_class
+    ② 在类的后面执行的操作: teardown_class
+    ③ 在用例的前面执行的操作: setup
+    ④ 在用例的后面执行的操作: teardown
+
+2. Fixture固件
+    实现完成在 用例/类/模块/会话 之前或之后执行的操作
+    Fixture完整的用法如下:
+        @pytest.fixture(scope="作用域", params="数据驱动", autouse="是否自动执行", ids="参数的别名", name="函数的别名")
+
+    2.1 fixture参数
+
+    scope: 作用域(yield之前的代码段表示之前,之后的代码段表示之后)
+        function: 在函数之前或者之后执行的操作
+            调用方式: 在函数中的参数通过固件的名称调用，固件如果有别名则必须使用别名进行调用
+            一个函数同时调用多个固件时，就近原则从左往右开始执行：第1个开始-第2个开始-……-第n个开始-函数内部逻辑-第n个结束-……-第2个结束-第1个结束
+        class: 在类之前或者之后执行的操作
+            调用方式: 通过装饰器@pytest.mark.usefixtures("fixture_name1", "fixture_name2",...)调用，固件如果有别名则必须使用别名进行调用
+            一个类同时调用多个固件时，就近原则从左往右开始执行: 第1个开始-第2个开始-……-第n个开始-函数内部逻辑-第n个结束-……-第2个结束-第1个结束
+        session/module: 在模块/类之前执行的操作
+            调用方式: 一般将autouse设置为True，结合conftest.py一起使用
+            ① conftest.py 是专门用于存放固件的配置文件
+            ② conftest.py 文件中的fixture在进行调用的时候不需要进行导包
+            ③ conftest.py 文件可以有多个，并且多个conftest.py文件之间没有冲突
+            ④ conftest.py 的生效范围为当前的目录以及子目录
+            ⑤ 函数或类调用fixture时的优先级为:
+                类下的固件 --> 模块下的固件 --> 当前目录下的conftest.py中的固件 --> 父目录下的conftest.py中的固件 --> ....
+
+    params: 数据驱动
+        数据格式为列表
+        params传参时，会循环列表，将每一次读到的值传给request.param
+        其中固件的参数request以及request.param的取值方式是固定的，不能更改
+
+        示例:@pytest.fixture(scope="function", params=read_data())
+                    def fixture_params(request):
+                        print("begin --- params fixture")
+                        yield request.param
+                        print("end   --- params fixture")
+
+    ids: 给参数起别名
+    ids不能单独使用,必须和params一起使用，作用的给参数起别名
+
+    name: 给fixture起别名
+        当使用了name给fixture起别名了之后，固件的原名称失效，调用时需要使用新名称
+
+    2.2 pytest的基础路径设置
+    如果项目只有一个基础路径即可使用
+        使用方式: 直接在 pytest.ini 文件中配置即可
+        base_url = url
+        调用方式: 与调用function作用域的固件一样，直接当做参数即可
+
+3. allure测试报告
+    allure包的内容:
+        bin: 执行文件
+        config: 配置文件
+        lib: jar包
+        plugins: 插件
+    3.1 修改allure测试报告的logo
+        ① 修改配置文件: config/allure.yaml;
+            加入自定义logo插件的配置
+            - custom-logo-plugin
+        ② 修改logo样式: plugins/custom-logo-plugin/static/styles.css
+        .side-nav__brand{
+        background: url('head.png') no-repeat left center !important;
+        margin-left: 45px;
+        height: 90px;
+        background-size: contain !important;
+        }
+
+        .side-nav__brand-text{
+            display: none;
+        }
+
+    3.2 Allure报告功能
+    allure常用的定制:
+    ① logo
+    ② 定制项目名称: @allure_epic
+    ③ 定制模块名称: @allure_feature
+    ③ 定制接口名称: @allure_story
+    ④ 定制用例名称: allure.dynamic.title
+    ⑤ 严重程度: @allure.severity(allure.severity_level.xxx)
+    ⑥ 描述: @allure.description
+    ⑦ 附件: @allure.attach(body="", name="", attachment_type=allure.attachment_type.xxx)
+
+    左边:
+        1) 项目名称定制: @allure_epic
+        2) 模块名称定制: @allure_feature
+        3) 接口名称定制: @allure_story
+        4) 用例名称定制:
+            @allure_title: 所有的用例用统一的名称
+            allure.dynamic.title: 每个用例可以使用不同的名称
+
+    右边:
+        1) 严重程度: @allure.severity(allure.severity_level.xxx)
+        BLOCKER: 致命BUG
+        CRITICAL: 严重BUG
+        NORMAL: 一般
+        MINOR: 提示
+        TRIVIAL: 轻微
+        2) 描述: allure.dynamic.description
+        3) 链接:
+            接口访问地址: @allure.link
+            BUG链接: @allure.issue
+            测试用例链接: @allure.testcase
+        4) 步骤: allure.step
+        5) 附件: allure.attach(body="", name="", attachment_type=xxx)
+                示例:
+                content = picture_open(r"H:\\allure-2.13.7\plugins\custom-logo-plugin\static\head.png")
+                allure.attach(body=content, name="xxx截图", attachment_type=allure.attachment_type.PNG)
+                allure.attach(body="接口地址: xxxx", name="接口地址", attachment_type=allure.attachment_type.TEXT)
+
+    3.3 局域网访问allure报告
+        在dos窗口输入
+        allure open allure_report_path
+
+4. pytest之parametrize+yaml实现数据驱动
+    @pytest.mark.parametrize(args_name, args_value
+    示例:
+    @pytest.mark.parametrize("name, age", [[tcs, 18], [tcs2, 19], [tcs3, 20]])
+    def test_parametrize(self, name, age):
+        print(age, name)
+    @pytest.mark.parametrize("args_name", [[tcs, 18], [tcs2, 19], [tcs3, 20]])
+    def test_parametrize(self, args_name):
+        print(args_name)
+
+    4.1 yaml文件实现数据驱动
+        将数据写在yaml文件中，调用公共类读取yaml中的输入传到args_value中实现数据驱动
+
+    4.2 接口自动化
+        将yaml中读取到的数据传到用例中后，读取数据自动发送请求
+        示例:
+        @allure.story("测试接口自动化")
+        @pytest.mark.parametrize("args_name", read_yaml("customized/get_access_token.yaml"))
+        def test_parametrize4(self, args_name):
+            allure.dynamic.title(args_name["name"])
+            name = args_name["name"]
+            method = args_name["request"]["method"]
+            urls = args_name["request"]["url"]
+            datas = args_name["request"]["data"]
+            headers = args_name["request"]["headers"]
+            validate = args_name["request"]["validate"]
+            print(datas)
+            res = requests.get(url=urls, data=datas)
+            print(res.json())
+
+5. requests
+    5.1 requests简介
+        requests库是python的第三方库
+        用来发送http请求以及接收http响应，主要用来做接口自动化
+    5.2 requests的常用方法
+        requests.get(url, params=None, **kwargs)
+        requests.post(url, data=None, json=None, **kwargs)
+        requests.put(url, data=None, **kwargs)
+        requests.delete(url, **kwargs)
+        requests.request(method, url, **kwargs)
+        其中 kwargs 是长度可变的字典
+        get/post/put/delete 方法返回的值都是request()方法
+        request() 返回的则是底层方法 session.request
+            对应的参数如下:
+            request(self, method, url,
+                params=None, data=None, headers=None, cookies=None, files=None,
+                auth=None, timeout=None, allow_redirects=True, proxies=None,
+                hooks=None, stream=None, verify=None, cert=None, json=None)
+
+            常用的参数:
+            method: 请求方式
+            url: 请求路径
+            headers: 请求头
+            params: get请求方式传参
+            json/data: post或者put请求方式传参
+            cookies: cookie信息
+            file: 文件上传
+            相应数据: response
+
+    5.3 响应的数据
+        response.text           响应数据的文本格式
+        response.json()         响应数据的JSON格式
+        response.content        响应数据的byte格式
+        response.status_code    响应数据的状态码
+        response.reason         响应数据的状态信息
+        response.cookies        响应数据的cookie信息
+        response.encoding       响应数据的编码格式
+        response.headers        响应数据的响应头晕
+        response.request        返回请求的数据
+
+    5.4 post的四种传参方式
+        json.dumps() 把json格式的字典转换成字符串
+        json.loads() 把json格式的字符串转换成字典
+        1) 通过data传参
+            如果参数为纯键值对的字典,表示表单传参,默认请求头为:
+            application/x-www-form-urlencoded
+            如果参数为字符串类型，默认请求头为:
+            text/plain
+        2) 通过json传参
+            通过json传参: 支持dict数据类型的数据传参
+            可以为纯键值对格式的字典，也可以为嵌套格式的字典，默认的请求头为:
+            application/json
+
+        ① form-data: 可以传键值对，也可以传文件
+            请求头: multipart/form-data
+            表单的传参方式: 通过data传参
+        ② x-www-form-urlencoded:
+            请求头: application/x-www-form-urlencoded
+            表单的请求方式: 通过data传参
+        ③ raw: text JavaScript json html xml
+            text: text/plain
+            JavaScript: application/javascript
+            json: application/json
+            html: text/html
+            xml: application/xml
+
+            json: 通过json格式传参(数据格式为字典)
+        ④ binary: 把文件转换为二进制传参
+            请求头: octet-stream
+            data传参
+
+        file: 文件上传
+
+6. cookie/session 统一请求
+    web相关的项目都会使用到cookie
+    cookie的用法:
+        ① 将每次接口请求后获得到的cookie保存到一个变量中，在下一次请求之前到上cookie
+        ② 使用会话: session会自动管理cookie，一个session对象会保持同一个会话中的所有请求之间的cookie信息
+      一般都会使用会话，会话对象让你能够跨请求保持某些参数;同时也会在同一个Session实例发出的所有请求之间保持cookie
+      所以如果你向同一主机发送多个请求，底层的TCP连接将会被重用，从而带来显著的性能上的提升
+
+6. 接口关联
+    6.1 接口关联的目的
+        接口与接口之间有些并不是相互独立的，而是有关联的
+        比如: 接口2中的请求参数在接口1的响应结果中，并且值是变化的
+        接口关联就是用来解决这个问题的
+
+    6.2 使用yaml文件实现接口关联
+        目标:将需要设置为全局变量的值进行提取，保存到一个独立的yaml文件"extract.yaml"中
+            之后的接口如果需要使用，那么只需要到extract.yaml这个文件中去取即可
+
+        实现:
+            ① 因为只有一个extract.yaml文件，如果不清理的话里面的值会越来越多；所以需要去清理
+                在每次执行用例之前进行清理: 使用 conftest.py 实现，使用固件fixture-scope=session
+                即每次会话之前，将extract.yaml中的值清空
+            ② 取值
+                在yaml用例中增加一级关键字extract，用字典格式表示取到的值名称以及取值的表达式
+                正则表达式:
+                例如: access_token: '"access_token":"(.*?)"'
+                jsonpath:
+                例如: expires_in: $.expires_in
+            ③ 读写清空:
+                新增工具类 封装对应的方法
+                写: 指定路径，追加键值对
+                读: 指定路径，要读的key
+                清空: 指定路径
+    6.3 不同的模块使用不同的base_url-封装
+        方法①: 使用 conftest.py 封装固件
+            将对应的base_url配置在config.yaml配置文件中，在对应的模块进行封装获得base_url
+        方法②: 使用init实例化时将base_url的对象传入得到config.yaml中对应的base_url
+
+7. 规范测试用例
+    必须有的一级关键字:
+        必须有: name、request、validate
+        如果使用init实例化获取base_url的方式获取base_url
+        那么一级关键字必须要有base_url
+    关键字request:
+        必须有: method、url
+        可选:
+            请求头: headers
+            get传参: params
+            post传参: data/json
+            文件上传: files
+    可选的一级关键字:
+        extract:
+          提取内容: 将键值对写入到extract.yaml中
+            正则表达式:
+            例如: access_token: '"access_token":"(.*?)"'
+            jsonpath:
+            例如: expires_in: $.expires_in
+          读取内容: 从extract.yaml中读取值
+            ${xxx}
+        parametrize:
+            key 为对应数据驱动数据的列名，使用"-"拼接;
+            value 为对应数据驱动的路径
+            {name-grant_type-appid-secret-assert_token: /datas/wechat_api_datas/get_access_token_datas.yaml}
+
+8. 热加载
+    实现读取用例中的对应规则，调用实例方法
+    优化读取extract.yaml的方法，使用反射实现
+
+9. 断言
+    在用例一级关键字validate下
+        状态断言:
+            相等断言-状态码=200
+        业务断言:
+            相等断言: equals: {status: 200}
+            包含断言: contains: access_token
+10. yaml数据驱动封装
+    先读取用例的所在的yaml文件
+    如果存在一级关键字: parametrize
+        调用封装的ddt方法
+        将用例以列表的形式返回，规则与$ddt{..}对应的值被替换为数据yaml文件对应的值
+    然后再将数据使用pytest 的 parametrize 进行读取yaml实现数据驱动
+
+11. 日志
+    新增一个工具类Logger，自定义封装日志输入方法
+
+12. 签名
+    在自定义工具类中封装签名方法
+    读取用例中对应规则的指定位置: 是否存在关键字sign
+    如果存在关键字sign:
+        调用sign签名方法, 签名需要传入请求数据，所以sign的值应为用例的路径
+

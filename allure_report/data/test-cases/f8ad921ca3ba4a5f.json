@@ -1,0 +1,164 @@
+{
+  "uid" : "f8ad921ca3ba4a5f",
+  "name" : "test_file_upload[case_info0]",
+  "fullName" : "testcase.wechat_api.test_wechat_api.TestWechatApi#test_file_upload",
+  "historyId" : "a603832130a34ef7ea269c3bce3f2365",
+  "time" : {
+    "start" : 1652662797292,
+    "stop" : 1652662797573,
+    "duration" : 281
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_extract",
+    "time" : {
+      "start" : 1652662796244,
+      "stop" : 1652662796244,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1652662796244,
+      "stop" : 1652662796244,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1652662796244,
+      "stop" : 1652662796244,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "4b050753b68577b5",
+      "name" : "log",
+      "source" : "4b050753b68577b5.txt",
+      "type" : "text/plain",
+      "size" : 1642
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1,
+    "hasContent" : true,
+    "stepsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "微信公众平台项目"
+  }, {
+    "name" : "epic",
+    "value" : "陶朝盛-项目"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase.wechat_api"
+  }, {
+    "name" : "suite",
+    "value" : "test_wechat_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestWechatApi"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-5LRDE9DJ"
+  }, {
+    "name" : "thread",
+    "value" : "14400-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.wechat_api.test_wechat_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case_info",
+    "value" : "{'name': '文件上传接口', 'base_url': 'base_wechat_url', 'request': {'url': '/cgi-bin/media/uploadimg?access_token=${get_extract_value(access_token)}', 'method': 'post', 'files': {'media': 'H://head.jpg'}}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 'url'}]}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "462282f93304329f",
+        "reportUrl" : "http://localhost:8080/jenkins/job/tcs_api_frame/9/allure/#testresult/462282f93304329f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652517298038,
+          "stop" : 1652517298250,
+          "duration" : 212
+        }
+      }, {
+        "uid" : "dd6ded4bda35a40e",
+        "reportUrl" : "http://localhost:8080/jenkins/job/tcs_api_frame/8/allure/#testresult/dd6ded4bda35a40e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652516433843,
+          "stop" : 1652516434045,
+          "duration" : 202
+        }
+      }, {
+        "uid" : "22f5846e8e147d49",
+        "reportUrl" : "http://localhost:8080/jenkins/job/tcs_api_frame/7/allure/#testresult/22f5846e8e147d49",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652515546879,
+          "stop" : 1652515547112,
+          "duration" : 233
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "f8ad921ca3ba4a5f.json",
+  "parameterValues" : [ "{'name': '文件上传接口', 'base_url': 'base_wechat_url', 'request': {'url': '/cgi-bin/media/uploadimg?access_token=${get_extract_value(access_token)}', 'method': 'post', 'files': {'media': 'H://head.jpg'}}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 'url'}]}" ]
+}

@@ -1,0 +1,10 @@
+-
+  name: 编辑标签接口
+  base_url: base_wechat_url
+  request:
+    url: /cgi-bin/tags/update?access_token=${get_extract_value(access_token)}
+    method: post
+    json: {"tag" : {"id": '${get_extract_value(id)}' ,"name":"change${get_random_number(11,10000)}"}}
+  validate:
+    - equals: {status_code: 200}
+    - equals: {errmsg: ok}

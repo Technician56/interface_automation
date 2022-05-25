@@ -1,0 +1,12 @@
+-
+  name: BASE64加密接口
+  base_url: base_encryption_url
+  request:
+    method: get
+    url: /base64login
+    params:
+      username: ${bs64(admin)}
+      password: ${bs64(123)}
+  validate:
+    - equals: {message: success}
+

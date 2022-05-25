@@ -1,0 +1,26 @@
+[ {
+  "data" : {
+    "duration" : 1327
+  }
+}, {
+  "buildOrder" : 9,
+  "reportUrl" : "http://localhost:8080/jenkins/job/tcs_api_frame/9/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 1005
+  }
+}, {
+  "buildOrder" : 8,
+  "reportUrl" : "http://localhost:8080/jenkins/job/tcs_api_frame/8/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 949
+  }
+}, {
+  "buildOrder" : 7,
+  "reportUrl" : "http://localhost:8080/jenkins/job/tcs_api_frame/7/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 1246
+  }
+} ]

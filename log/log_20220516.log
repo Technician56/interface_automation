@@ -1,0 +1,136 @@
+2022:05:16 08:59:56_info_第74行_INFO:------------------------------
+2022:05:16 08:59:56_info_第74行_INFO:用例 获取鉴权码access token接口 开始
+2022:05:16 08:59:56_info_第74行_INFO:------开始发送接口请求------
+2022:05:16 08:59:56_info_第74行_INFO:请求方式: get
+2022:05:16 08:59:56_info_第74行_INFO:URL: https://api.weixin.qq.com/cgi-bin/token?a=1&b=2
+2022:05:16 08:59:56_info_第74行_INFO:请求参数:{'params': {'grant_type': 'client_credential', 'appid': 'wx1d369be0180ad357', 'secret': '5a5615a2223e4295e9f4e153e2667b87'}, 'headers': {'sign': 'A11E681F6F7A175EE93A8BCD00ABB431'}}
+2022:05:16 08:59:56_info_第74行_INFO:请求结束-->
+实际结果--> {"access_token":"56_R6bWfh9QBnsjnhVGvY76gF5Rkss1lAgfh2Cr1kkl7kSGkDR1Jgv_6FIKzFsqVVe8AHPjl92I3nUWZ1I1cc4VkISrDFnfPrz99OQ4TcLyjD4qPA_CcGSq3ypbMXUTJUvOFRl7iGzCveMIBwYuCTUjAEATKL","expires_in":7200}
+2022:05:16 08:59:56_info_第74行_INFO:------断言开始------
+2022:05:16 08:59:56_info_第74行_INFO:状态断言成功: 状态码status_code 等于 200
+2022:05:16 08:59:56_info_第74行_INFO:断言成功: 实际结果中存在:access_token  --> 实际结果: {'access_token': '56_R6bWfh9QBnsjnhVGvY76gF5Rkss1lAgfh2Cr1kkl7kSGkDR1Jgv_6FIKzFsqVVe8AHPjl92I3nUWZ1I1cc4VkISrDFnfPrz99OQ4TcLyjD4qPA_CcGSq3ypbMXUTJUvOFRl7iGzCveMIBwYuCTUjAEATKL', 'expires_in': 7200}
+2022:05:16 08:59:56_info_第74行_INFO:------断言结束------
+2022:05:16 08:59:56_info_第74行_INFO:用例 获取鉴权码access token接口 结束
+2022:05:16 08:59:56_info_第74行_INFO:------断言通过------
+2022:05:16 08:59:56_info_第74行_INFO:------------------------------
+2022:05:16 08:59:56_info_第74行_INFO:用例 appid为空 开始
+2022:05:16 08:59:56_info_第74行_INFO:------开始发送接口请求------
+2022:05:16 08:59:56_info_第74行_INFO:请求方式: get
+2022:05:16 08:59:56_info_第74行_INFO:URL: https://api.weixin.qq.com/cgi-bin/token?a=1&b=2
+2022:05:16 08:59:56_info_第74行_INFO:请求参数:{'params': {'grant_type': 'client_credential', 'appid': '', 'secret': '5a5615a2223e4295e9f4e153e2667b87'}, 'headers': {'sign': '93AF5C9360974E82849532633931A2D5'}}
+2022:05:16 08:59:56_info_第74行_INFO:请求结束-->
+实际结果--> {"errcode":41002,"errmsg":"appid missing rid: 6281a20c-30258aca-197d60a9"}
+2022:05:16 08:59:56_info_第74行_INFO:------断言开始------
+2022:05:16 08:59:56_info_第74行_INFO:状态断言成功: 状态码status_code 等于 200
+2022:05:16 08:59:56_info_第74行_INFO:断言成功: 实际结果中存在:41002  --> 实际结果: {'errcode': 41002, 'errmsg': 'appid missing rid: 6281a20c-30258aca-197d60a9'}
+2022:05:16 08:59:56_info_第74行_INFO:------断言结束------
+2022:05:16 08:59:56_info_第74行_INFO:用例 appid为空 结束
+2022:05:16 08:59:56_info_第74行_INFO:------断言通过------
+2022:05:16 08:59:56_info_第74行_INFO:------------------------------
+2022:05:16 08:59:56_info_第74行_INFO:用例 获取鉴权码access token接口 开始
+2022:05:16 08:59:56_info_第74行_INFO:------开始发送接口请求------
+2022:05:16 08:59:56_info_第74行_INFO:请求方式: get
+2022:05:16 08:59:56_info_第74行_INFO:URL: https://api.weixin.qq.com/cgi-bin/token
+2022:05:16 08:59:56_info_第74行_INFO:请求参数:{'params': {'grant_type': 'client_credential', 'appid': 'wx1d369be0180ad357', 'secret': '5a5615a2223e4295e9f4e153e2667b87'}}
+2022:05:16 08:59:56_info_第74行_INFO:请求结束-->
+实际结果--> {"access_token":"56_R6bWfh9QBnsjnhVGvY76gF5Rkss1lAgfh2Cr1kkl7kSGkDR1Jgv_6FIKzFsqVVe8AHPjl92I3nUWZ1I1cc4VkISrDFnfPrz99OQ4TcLyjD4qPA_CcGSq3ypbMXUTJUvOFRl7iGzCveMIBwYuMDFjAEABSU","expires_in":7199}
+2022:05:16 08:59:56_info_第74行_INFO:------断言开始------
+2022:05:16 08:59:56_info_第74行_INFO:状态断言成功: 状态码status_code 等于 200
+2022:05:16 08:59:56_info_第74行_INFO:断言成功: 实际结果中存在:access_token  --> 实际结果: {'access_token': '56_R6bWfh9QBnsjnhVGvY76gF5Rkss1lAgfh2Cr1kkl7kSGkDR1Jgv_6FIKzFsqVVe8AHPjl92I3nUWZ1I1cc4VkISrDFnfPrz99OQ4TcLyjD4qPA_CcGSq3ypbMXUTJUvOFRl7iGzCveMIBwYuMDFjAEABSU', 'expires_in': 7199}
+2022:05:16 08:59:56_info_第74行_INFO:------断言结束------
+2022:05:16 08:59:56_info_第74行_INFO:用例 获取鉴权码access token接口 结束
+2022:05:16 08:59:56_info_第74行_INFO:------断言通过------
+2022:05:16 08:59:56_info_第74行_INFO:------------------------------
+2022:05:16 08:59:56_info_第74行_INFO:用例 appid为空 开始
+2022:05:16 08:59:56_info_第74行_INFO:------开始发送接口请求------
+2022:05:16 08:59:56_info_第74行_INFO:请求方式: get
+2022:05:16 08:59:56_info_第74行_INFO:URL: https://api.weixin.qq.com/cgi-bin/token
+2022:05:16 08:59:56_info_第74行_INFO:请求参数:{'params': {'grant_type': 'client_credential', 'appid': '', 'secret': '5a5615a2223e4295e9f4e153e2667b87'}}
+2022:05:16 08:59:56_info_第74行_INFO:请求结束-->
+实际结果--> {"errcode":41002,"errmsg":"appid missing rid: 6281a20c-218a3677-79e0a15a"}
+2022:05:16 08:59:56_info_第74行_INFO:------断言开始------
+2022:05:16 08:59:56_info_第74行_INFO:状态断言成功: 状态码status_code 等于 200
+2022:05:16 08:59:56_info_第74行_INFO:断言成功: 实际结果中存在:41002  --> 实际结果: {'errcode': 41002, 'errmsg': 'appid missing rid: 6281a20c-218a3677-79e0a15a'}
+2022:05:16 08:59:56_info_第74行_INFO:------断言结束------
+2022:05:16 08:59:56_info_第74行_INFO:用例 appid为空 结束
+2022:05:16 08:59:56_info_第74行_INFO:------断言通过------
+2022:05:16 08:59:56_info_第74行_INFO:------------------------------
+2022:05:16 08:59:56_info_第74行_INFO:用例 获取公众号已创建的标签接口 开始
+2022:05:16 08:59:56_info_第74行_INFO:替换: ${get_extract_value(access_token)} ---> 56_R6bWfh9QBnsjnhVGvY76gF5Rkss1lAgfh2Cr1kkl7kSGkDR1Jgv_6FIKzFsqVVe8AHPjl92I3nUWZ1I1cc4VkISrDFnfPrz99OQ4TcLyjD4qPA_CcGSq3ypbMXUTJUvOFRl7iGzCveMIBwYuMDFjAEABSU
+2022:05:16 08:59:56_info_第74行_INFO:------开始发送接口请求------
+2022:05:16 08:59:56_info_第74行_INFO:请求方式: get
+2022:05:16 08:59:56_info_第74行_INFO:URL: https://api.weixin.qq.com/cgi-bin/tags/get?access_token=56_R6bWfh9QBnsjnhVGvY76gF5Rkss1lAgfh2Cr1kkl7kSGkDR1Jgv_6FIKzFsqVVe8AHPjl92I3nUWZ1I1cc4VkISrDFnfPrz99OQ4TcLyjD4qPA_CcGSq3ypbMXUTJUvOFRl7iGzCveMIBwYuMDFjAEABSU
+2022:05:16 08:59:56_info_第74行_INFO:请求参数:{}
+2022:05:16 08:59:56_info_第74行_INFO:请求结束-->
+实际结果--> {"tags":[{"id":2,"name":"星标组","count":0},{"id":200,"name":"test1643348334842","count":0},{"id":202,"name":"test1643348444229","count":0},{"id":203,"name":"test1643348484416","count":0},{"id":216,"name":"tao1643541526958","count":0},{"id":217,"name":"tao1643541667392","count":0},{"id":218,"name":"tao1643541771867","count":0},{"id":219,"name":"tao1643541803197","count":0},{"id":220,"name":"tao1643541820732","count":0},{"id":221,"name":"tao1643541827559","count":0},{"id":222,"name":"tao1643541907241","count":0},{"id":223,"name":"tao1643541919946","count":0},{"id":224,"name":"tao1643541973136","count":0},{"id":225,"name":"tao1643541995375","count":0},{"id":226,"name":"tao1643542012214","count":0},{"id":227,"name":"tao1643542220409","count":0},{"id":228,"name":"tao1643542243627","count":0},{"id":229,"name":"tao1643542335092","count":0},{"id":230,"name":"tao1643542386115","count":0},{"id":231,"name":"tao1643542427162","count":0},{"id":232,"name":"tao1643542481919","count":0},{"id":233,"name":"tao1643542636788","count":0},{"id":235,"name":"广东","count":0},{"id":236,"name":"广东357230342","count":0},{"id":237,"name":"广东974107847","count":0},{"id":238,"name":"广东564724462","count":0},{"id":239,"name":"广东734349565","count":0},{"id":240,"name":"广东419786404","count":0},{"id":241,"name":"广东379505207","count":0},{"id":242,"name":"change1799303","count":0},{"id":243,"name":"change3590485","count":0},{"id":319,"name":"tao1649596630696","count":0},{"id":320,"name":"tao1649596639658","count":0},{"id":321,"name":"tao1649596664737","count":0},{"id":322,"name":"tao1649596704027","count":0},{"id":323,"name":"\\u5e05\\u54e596658797","count":0},{"id":324,"name":"\\u5e05\\u54e570412034","count":0},{"id":325,"name":"\\u5e05\\u54e579582088","count":0},{"id":326,"name":"\\u5e05\\u54e540422556","count":0},{"id":327,"name":"\\u5e05\\u54e540180728","count":0},{"id":328,"name":"\\u5e05\\u54e510181002","count":0},{"id":329,"name":"\\u5c0f\\u5e05\\u54e581503043","count":0},{"id":347,"name":"\\u5e05\\u54e548983493","count":0},{"id":364,"name":"\\u5e05\\u54e563884148","count":0},{"id":365,"name":"\\u5e05\\u54e597910309","count":0},{"id":366,"name":"\\u5e05\\u54e523489038","count":0},{"id":367,"name":"\\u5e05\\u54e514321513","count":0},{"id":368,"name":"\\u5c0f\\u5e05\\u54e573859019","count":0},{"id":369,"name":"\\u5c0f\\u5e05\\u54e556215828","count":0},{"id":370,"name":"\\u5c0f\\u5e05\\u54e511124022","count":0},{"id":399,"name":"\\u5e05\\u54e543239279","count":0},{"id":400,"name":"\\u5e05\\u54e530225850","count":0},{"id":401,"name":"\\u5e05\\u54e528714402","count":0},{"id":402,"name":"\\u5e05\\u54e565297896","count":0},{"id":403,"name":"\\u5c0f\\u5e05\\u54e580972677","count":0},{"id":404,"name":"\\u5c0f\\u5e05\\u54e582285354","count":0},{"id":412,"name":"\\u5e05\\u54e5222","count":0},{"id":413,"name":"\\u5e05\\u54e52221","count":0},{"id":414,"name":"\\u5e05\\u54e5862198","count":0},{"id":415,"name":"\\u5e05\\u54e5593730","count":0},{"id":416,"name":"\\u5e05\\u54e5807805","count":0},{"id":417,"name":"\\u5e05\\u54e5690636","count":0},{"id":418,"name":"\\u5e05\\u54e5523393","count":0},{"id":419,"name":"\\u5e05\\u54e5474204","count":0},{"id":420,"name":"\\u5e05\\u54e5447717","count":0},{"id":421,"name":"\\u5e05\\u54e5699230","count":0},{"id":422,"name":"\\u5e05\\u54e5936709","count":0},{"id":423,"name":"\\u5e05\\u54e5545112","count":0},{"id":424,"name":"\\u5c0f\\u5e05\\u54e51264","count":0},{"id":425,"name":"\\u5c0f\\u5e05\\u54e56673","count":0},{"id":442,"name":"\\u5c0f\\u5e05\\u54e58837","count":0},{"id":443,"name":"\\u5c0f\\u5e05\\u54e54216","count":0},{"id":444,"name":"\\u5c0f\\u5e05\\u54e52075","count":0},{"id":445,"name":"\\u5c0f\\u5e05\\u54e54784","count":0},{"id":446,"name":"\\u5c0f\\u5e05\\u54e55100","count":0},{"id":447,"name":"\\u5c0f\\u5e05\\u54e52129","count":0},{"id":448,"name":"\\u5c0f\\u5e05\\u54e58766","count":0},{"id":449,"name":"\\u5c0f\\u5e05\\u54e57948","count":0},{"id":454,"name":"\\u5c0f\\u5e05\\u54e54283","count":0},{"id":455,"name":"\\u5c0f\\u5e05\\u54e58714","count":0},{"id":456,"name":"\\u5c0f\\u5e05\\u54e52294","count":0},{"id":498,"name":"\\u5c0f\\u5e05\\u54e53758","count":0},{"id":499,"name":"\\u5c0f\\u5e05\\u54e59177","count":0},{"id":500,"name":"\\u5c0f\\u5e05\\u54e55261","count":0},{"id":501,"name":"\\u5c0f\\u5e05\\u54e55578","count":0},{"id":502,"name":"\\u5c0f\\u5e05\\u54e59632","count":0},{"id":503,"name":"change1281","count":0},{"id":504,"name":"change990","count":0},{"id":505,"name":"change7256","count":0},{"id":506,"name":"change1093","count":0},{"id":553,"name":"change2633","count":0},{"id":554,"name":"change5869","count":0},{"id":555,"name":"change5823","count":0},{"id":556,"name":"change6672","count":0},{"id":557,"name":"change1036","count":0},{"id":558,"name":"change5804","count":0},{"id":559,"name":"change5563","count":0},{"id":560,"name":"change6114","count":0},{"id":561,"name":"change6466","count":0},{"id":562,"name":"change3595","count":0}]}
+2022:05:16 08:59:56_info_第74行_INFO:------断言开始------
+2022:05:16 08:59:56_info_第74行_INFO:状态断言成功: 状态码status_code 等于 200
+2022:05:16 08:59:56_info_第74行_INFO:断言成功: 实际结果中存在:tags  --> 实际结果: {'tags': [{'id': 2, 'name': '星标组', 'count': 0}, {'id': 200, 'name': 'test1643348334842', 'count': 0}, {'id': 202, 'name': 'test1643348444229', 'count': 0}, {'id': 203, 'name': 'test1643348484416', 'count': 0}, {'id': 216, 'name': 'tao1643541526958', 'count': 0}, {'id': 217, 'name': 'tao1643541667392', 'count': 0}, {'id': 218, 'name': 'tao1643541771867', 'count': 0}, {'id': 219, 'name': 'tao1643541803197', 'count': 0}, {'id': 220, 'name': 'tao1643541820732', 'count': 0}, {'id': 221, 'name': 'tao1643541827559', 'count': 0}, {'id': 222, 'name': 'tao1643541907241', 'count': 0}, {'id': 223, 'name': 'tao1643541919946', 'count': 0}, {'id': 224, 'name': 'tao1643541973136', 'count': 0}, {'id': 225, 'name': 'tao1643541995375', 'count': 0}, {'id': 226, 'name': 'tao1643542012214', 'count': 0}, {'id': 227, 'name': 'tao1643542220409', 'count': 0}, {'id': 228, 'name': 'tao1643542243627', 'count': 0}, {'id': 229, 'name': 'tao1643542335092', 'count': 0}, {'id': 230, 'name': 'tao1643542386115', 'count': 0}, {'id': 231, 'name': 'tao1643542427162', 'count': 0}, {'id': 232, 'name': 'tao1643542481919', 'count': 0}, {'id': 233, 'name': 'tao1643542636788', 'count': 0}, {'id': 235, 'name': '广东', 'count': 0}, {'id': 236, 'name': '广东357230342', 'count': 0}, {'id': 237, 'name': '广东974107847', 'count': 0}, {'id': 238, 'name': '广东564724462', 'count': 0}, {'id': 239, 'name': '广东734349565', 'count': 0}, {'id': 240, 'name': '广东419786404', 'count': 0}, {'id': 241, 'name': '广东379505207', 'count': 0}, {'id': 242, 'name': 'change1799303', 'count': 0}, {'id': 243, 'name': 'change3590485', 'count': 0}, {'id': 319, 'name': 'tao1649596630696', 'count': 0}, {'id': 320, 'name': 'tao1649596639658', 'count': 0}, {'id': 321, 'name': 'tao1649596664737', 'count': 0}, {'id': 322, 'name': 'tao1649596704027', 'count': 0}, {'id': 323, 'name': '\\u5e05\\u54e596658797', 'count': 0}, {'id': 324, 'name': '\\u5e05\\u54e570412034', 'count': 0}, {'id': 325, 'name': '\\u5e05\\u54e579582088', 'count': 0}, {'id': 326, 'name': '\\u5e05\\u54e540422556', 'count': 0}, {'id': 327, 'name': '\\u5e05\\u54e540180728', 'count': 0}, {'id': 328, 'name': '\\u5e05\\u54e510181002', 'count': 0}, {'id': 329, 'name': '\\u5c0f\\u5e05\\u54e581503043', 'count': 0}, {'id': 347, 'name': '\\u5e05\\u54e548983493', 'count': 0}, {'id': 364, 'name': '\\u5e05\\u54e563884148', 'count': 0}, {'id': 365, 'name': '\\u5e05\\u54e597910309', 'count': 0}, {'id': 366, 'name': '\\u5e05\\u54e523489038', 'count': 0}, {'id': 367, 'name': '\\u5e05\\u54e514321513', 'count': 0}, {'id': 368, 'name': '\\u5c0f\\u5e05\\u54e573859019', 'count': 0}, {'id': 369, 'name': '\\u5c0f\\u5e05\\u54e556215828', 'count': 0}, {'id': 370, 'name': '\\u5c0f\\u5e05\\u54e511124022', 'count': 0}, {'id': 399, 'name': '\\u5e05\\u54e543239279', 'count': 0}, {'id': 400, 'name': '\\u5e05\\u54e530225850', 'count': 0}, {'id': 401, 'name': '\\u5e05\\u54e528714402', 'count': 0}, {'id': 402, 'name': '\\u5e05\\u54e565297896', 'count': 0}, {'id': 403, 'name': '\\u5c0f\\u5e05\\u54e580972677', 'count': 0}, {'id': 404, 'name': '\\u5c0f\\u5e05\\u54e582285354', 'count': 0}, {'id': 412, 'name': '\\u5e05\\u54e5222', 'count': 0}, {'id': 413, 'name': '\\u5e05\\u54e52221', 'count': 0}, {'id': 414, 'name': '\\u5e05\\u54e5862198', 'count': 0}, {'id': 415, 'name': '\\u5e05\\u54e5593730', 'count': 0}, {'id': 416, 'name': '\\u5e05\\u54e5807805', 'count': 0}, {'id': 417, 'name': '\\u5e05\\u54e5690636', 'count': 0}, {'id': 418, 'name': '\\u5e05\\u54e5523393', 'count': 0}, {'id': 419, 'name': '\\u5e05\\u54e5474204', 'count': 0}, {'id': 420, 'name': '\\u5e05\\u54e5447717', 'count': 0}, {'id': 421, 'name': '\\u5e05\\u54e5699230', 'count': 0}, {'id': 422, 'name': '\\u5e05\\u54e5936709', 'count': 0}, {'id': 423, 'name': '\\u5e05\\u54e5545112', 'count': 0}, {'id': 424, 'name': '\\u5c0f\\u5e05\\u54e51264', 'count': 0}, {'id': 425, 'name': '\\u5c0f\\u5e05\\u54e56673', 'count': 0}, {'id': 442, 'name': '\\u5c0f\\u5e05\\u54e58837', 'count': 0}, {'id': 443, 'name': '\\u5c0f\\u5e05\\u54e54216', 'count': 0}, {'id': 444, 'name': '\\u5c0f\\u5e05\\u54e52075', 'count': 0}, {'id': 445, 'name': '\\u5c0f\\u5e05\\u54e54784', 'count': 0}, {'id': 446, 'name': '\\u5c0f\\u5e05\\u54e55100', 'count': 0}, {'id': 447, 'name': '\\u5c0f\\u5e05\\u54e52129', 'count': 0}, {'id': 448, 'name': '\\u5c0f\\u5e05\\u54e58766', 'count': 0}, {'id': 449, 'name': '\\u5c0f\\u5e05\\u54e57948', 'count': 0}, {'id': 454, 'name': '\\u5c0f\\u5e05\\u54e54283', 'count': 0}, {'id': 455, 'name': '\\u5c0f\\u5e05\\u54e58714', 'count': 0}, {'id': 456, 'name': '\\u5c0f\\u5e05\\u54e52294', 'count': 0}, {'id': 498, 'name': '\\u5c0f\\u5e05\\u54e53758', 'count': 0}, {'id': 499, 'name': '\\u5c0f\\u5e05\\u54e59177', 'count': 0}, {'id': 500, 'name': '\\u5c0f\\u5e05\\u54e55261', 'count': 0}, {'id': 501, 'name': '\\u5c0f\\u5e05\\u54e55578', 'count': 0}, {'id': 502, 'name': '\\u5c0f\\u5e05\\u54e59632', 'count': 0}, {'id': 503, 'name': 'change1281', 'count': 0}, {'id': 504, 'name': 'change990', 'count': 0}, {'id': 505, 'name': 'change7256', 'count': 0}, {'id': 506, 'name': 'change1093', 'count': 0}, {'id': 553, 'name': 'change2633', 'count': 0}, {'id': 554, 'name': 'change5869', 'count': 0}, {'id': 555, 'name': 'change5823', 'count': 0}, {'id': 556, 'name': 'change6672', 'count': 0}, {'id': 557, 'name': 'change1036', 'count': 0}, {'id': 558, 'name': 'change5804', 'count': 0}, {'id': 559, 'name': 'change5563', 'count': 0}, {'id': 560, 'name': 'change6114', 'count': 0}, {'id': 561, 'name': 'change6466', 'count': 0}, {'id': 562, 'name': 'change3595', 'count': 0}]}
+2022:05:16 08:59:56_info_第74行_INFO:------断言结束------
+2022:05:16 08:59:56_info_第74行_INFO:用例 获取公众号已创建的标签接口 结束
+2022:05:16 08:59:56_info_第74行_INFO:------断言通过------
+2022:05:16 08:59:56_info_第74行_INFO:------------------------------
+2022:05:16 08:59:56_info_第74行_INFO:用例 创建标签接口 开始
+2022:05:16 08:59:56_info_第74行_INFO:替换: ${get_extract_value(access_token)} ---> 56_R6bWfh9QBnsjnhVGvY76gF5Rkss1lAgfh2Cr1kkl7kSGkDR1Jgv_6FIKzFsqVVe8AHPjl92I3nUWZ1I1cc4VkISrDFnfPrz99OQ4TcLyjD4qPA_CcGSq3ypbMXUTJUvOFRl7iGzCveMIBwYuMDFjAEABSU
+2022:05:16 08:59:56_info_第74行_INFO:替换: ${get_random_number(1000,9999)} ---> 7151
+2022:05:16 08:59:56_info_第74行_INFO:------开始发送接口请求------
+2022:05:16 08:59:56_info_第74行_INFO:请求方式: post
+2022:05:16 08:59:56_info_第74行_INFO:URL: https://api.weixin.qq.com/cgi-bin/tags/create?access_token=56_R6bWfh9QBnsjnhVGvY76gF5Rkss1lAgfh2Cr1kkl7kSGkDR1Jgv_6FIKzFsqVVe8AHPjl92I3nUWZ1I1cc4VkISrDFnfPrz99OQ4TcLyjD4qPA_CcGSq3ypbMXUTJUvOFRl7iGzCveMIBwYuMDFjAEABSU
+2022:05:16 08:59:56_info_第74行_INFO:请求参数:{'json': {'tag': {'name': '小帅哥7151'}}}
+2022:05:16 08:59:57_info_第74行_INFO:请求结束-->
+实际结果--> {"tag":{"id":570,"name":"\\u5c0f\\u5e05\\u54e57151"}}
+2022:05:16 08:59:57_info_第74行_INFO:替换: ${get_extract_value(id)} ---> 570
+2022:05:16 08:59:57_info_第74行_INFO:------断言开始------
+2022:05:16 08:59:57_info_第74行_INFO:状态断言成功: 状态码status_code 等于 200
+2022:05:16 08:59:57_info_第74行_INFO:业务断言成功: id 等于 570
+2022:05:16 08:59:57_info_第74行_INFO:------断言结束------
+2022:05:16 08:59:57_info_第74行_INFO:用例 创建标签接口 结束
+2022:05:16 08:59:57_info_第74行_INFO:------断言通过------
+2022:05:16 08:59:57_info_第74行_INFO:------------------------------
+2022:05:16 08:59:57_info_第74行_INFO:用例 编辑标签接口 开始
+2022:05:16 08:59:57_info_第74行_INFO:替换: ${get_extract_value(access_token)} ---> 56_R6bWfh9QBnsjnhVGvY76gF5Rkss1lAgfh2Cr1kkl7kSGkDR1Jgv_6FIKzFsqVVe8AHPjl92I3nUWZ1I1cc4VkISrDFnfPrz99OQ4TcLyjD4qPA_CcGSq3ypbMXUTJUvOFRl7iGzCveMIBwYuMDFjAEABSU
+2022:05:16 08:59:57_info_第74行_INFO:替换: ${get_extract_value(id)} ---> 570
+2022:05:16 08:59:57_info_第74行_INFO:替换: ${get_random_number(11,10000)} ---> 6963
+2022:05:16 08:59:57_info_第74行_INFO:------开始发送接口请求------
+2022:05:16 08:59:57_info_第74行_INFO:请求方式: post
+2022:05:16 08:59:57_info_第74行_INFO:URL: https://api.weixin.qq.com/cgi-bin/tags/update?access_token=56_R6bWfh9QBnsjnhVGvY76gF5Rkss1lAgfh2Cr1kkl7kSGkDR1Jgv_6FIKzFsqVVe8AHPjl92I3nUWZ1I1cc4VkISrDFnfPrz99OQ4TcLyjD4qPA_CcGSq3ypbMXUTJUvOFRl7iGzCveMIBwYuMDFjAEABSU
+2022:05:16 08:59:57_info_第74行_INFO:请求参数:{'json': {'tag': {'id': 570, 'name': 'change6963'}}}
+2022:05:16 08:59:57_info_第74行_INFO:请求结束-->
+实际结果--> {"errcode":0,"errmsg":"ok"}
+2022:05:16 08:59:57_info_第74行_INFO:------断言开始------
+2022:05:16 08:59:57_info_第74行_INFO:状态断言成功: 状态码status_code 等于 200
+2022:05:16 08:59:57_info_第74行_INFO:业务断言成功: errmsg 等于 ok
+2022:05:16 08:59:57_info_第74行_INFO:------断言结束------
+2022:05:16 08:59:57_info_第74行_INFO:用例 编辑标签接口 结束
+2022:05:16 08:59:57_info_第74行_INFO:------断言通过------
+2022:05:16 08:59:57_info_第74行_INFO:------------------------------
+2022:05:16 08:59:57_info_第74行_INFO:用例 删除标签接口 开始
+2022:05:16 08:59:57_info_第74行_INFO:替换: ${get_extract_value(access_token)} ---> 56_R6bWfh9QBnsjnhVGvY76gF5Rkss1lAgfh2Cr1kkl7kSGkDR1Jgv_6FIKzFsqVVe8AHPjl92I3nUWZ1I1cc4VkISrDFnfPrz99OQ4TcLyjD4qPA_CcGSq3ypbMXUTJUvOFRl7iGzCveMIBwYuMDFjAEABSU
+2022:05:16 08:59:57_info_第74行_INFO:替换: ${get_extract_value(id)} ---> 570
+2022:05:16 08:59:57_info_第74行_INFO:------开始发送接口请求------
+2022:05:16 08:59:57_info_第74行_INFO:请求方式: post
+2022:05:16 08:59:57_info_第74行_INFO:URL: https://api.weixin.qq.com/cgi-bin/tags/delete?access_token=56_R6bWfh9QBnsjnhVGvY76gF5Rkss1lAgfh2Cr1kkl7kSGkDR1Jgv_6FIKzFsqVVe8AHPjl92I3nUWZ1I1cc4VkISrDFnfPrz99OQ4TcLyjD4qPA_CcGSq3ypbMXUTJUvOFRl7iGzCveMIBwYuMDFjAEABSU
+2022:05:16 08:59:57_info_第74行_INFO:请求参数:{'json': {'tag': {'id': 570}}}
+2022:05:16 08:59:57_info_第74行_INFO:请求结束-->
+实际结果--> {"errcode":0,"errmsg":"ok"}
+2022:05:16 08:59:57_info_第74行_INFO:------断言开始------
+2022:05:16 08:59:57_info_第74行_INFO:状态断言成功: 状态码status_code 等于 200
+2022:05:16 08:59:57_info_第74行_INFO:业务断言成功: errmsg 等于 ok
+2022:05:16 08:59:57_info_第74行_INFO:------断言结束------
+2022:05:16 08:59:57_info_第74行_INFO:用例 删除标签接口 结束
+2022:05:16 08:59:57_info_第74行_INFO:------断言通过------
+2022:05:16 08:59:57_info_第74行_INFO:------------------------------
+2022:05:16 08:59:57_info_第74行_INFO:用例 文件上传接口 开始
+2022:05:16 08:59:57_info_第74行_INFO:替换: ${get_extract_value(access_token)} ---> 56_R6bWfh9QBnsjnhVGvY76gF5Rkss1lAgfh2Cr1kkl7kSGkDR1Jgv_6FIKzFsqVVe8AHPjl92I3nUWZ1I1cc4VkISrDFnfPrz99OQ4TcLyjD4qPA_CcGSq3ypbMXUTJUvOFRl7iGzCveMIBwYuMDFjAEABSU
+2022:05:16 08:59:57_info_第74行_INFO:------开始发送接口请求------
+2022:05:16 08:59:57_info_第74行_INFO:请求方式: post
+2022:05:16 08:59:57_info_第74行_INFO:URL: https://api.weixin.qq.com/cgi-bin/media/uploadimg?access_token=56_R6bWfh9QBnsjnhVGvY76gF5Rkss1lAgfh2Cr1kkl7kSGkDR1Jgv_6FIKzFsqVVe8AHPjl92I3nUWZ1I1cc4VkISrDFnfPrz99OQ4TcLyjD4qPA_CcGSq3ypbMXUTJUvOFRl7iGzCveMIBwYuMDFjAEABSU
+2022:05:16 08:59:57_info_第74行_INFO:请求参数:{'files': {'media': <_io.BufferedReader name='H://head.jpg'>}}
+2022:05:16 08:59:57_info_第74行_INFO:请求结束-->
+实际结果--> {"url":"http:\/\/mmbiz.qpic.cn\/mmbiz_jpg\/xq7PEwaIec4GOYQYN4sDjLUklcNS93j2yI2NXrpkxDB4mBBKWgh0s9ufArb1sDpbgP5iasgo6Qcnib6tibRmiazc2g\/0"}
+2022:05:16 08:59:57_info_第74行_INFO:------断言开始------
+2022:05:16 08:59:57_info_第74行_INFO:状态断言成功: 状态码status_code 等于 200
+2022:05:16 08:59:57_info_第74行_INFO:断言成功: 实际结果中存在:url  --> 实际结果: {'url': 'http://mmbiz.qpic.cn/mmbiz_jpg/xq7PEwaIec4GOYQYN4sDjLUklcNS93j2yI2NXrpkxDB4mBBKWgh0s9ufArb1sDpbgP5iasgo6Qcnib6tibRmiazc2g/0'}
+2022:05:16 08:59:57_info_第74行_INFO:------断言结束------
+2022:05:16 08:59:57_info_第74行_INFO:用例 文件上传接口 结束
+2022:05:16 08:59:57_info_第74行_INFO:------断言通过------
