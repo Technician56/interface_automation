@@ -13,10 +13,9 @@ import traceback
 import jsonpath
 import requests
 
-from Interface_automation.pytest.testcase.commons.decryption_utils import DecryptionUtils
-from Interface_automation.pytest.testcase.commons.logger_utils import info, error
-from Interface_automation.pytest.testcase.commons.yaml_utils import set_extract_yaml, get_base_url, get_sign, \
-    get_random_number
+from interface_automation.testcase.commons.decryption_utils import DecryptionUtils
+from interface_automation.testcase.commons.logger_utils import info, error
+from interface_automation.testcase.commons.yaml_utils import get_base_url, set_extract_yaml, get_sign, get_random_number
 
 
 class RequestsUtils:

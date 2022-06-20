@@ -11,7 +11,7 @@ import traceback
 
 import yaml
 
-from Interface_automation.pytest.testcase.commons.logger_utils import error
+from interface_automation.testcase.commons.logger_utils import error
 
 
 class ParametrizeUtils:
@@ -61,7 +61,7 @@ class ParametrizeUtils:
 
     @staticmethod
     def get_object_path():
-        return os.getcwd().split("pytest")[0] + "pytest"
+        return os.getcwd()
 
     def get_parametrize_data(self, path):
         try:

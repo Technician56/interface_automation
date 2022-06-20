@@ -7,7 +7,7 @@
 # @file    :pytest_main.py
 import sys
 
-sys.path.append(r"H://pyProjects/learn")
+# sys.path.append(r"H://pyProjects/learn")
 import os
 import time
 

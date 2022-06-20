@@ -10,7 +10,7 @@ import logging
 import os
 import time
 
-from Interface_automation.pytest.testcase.commons.config_utils import ConfigUtils
+from interface_automation.testcase.commons.config_utils import ConfigUtils
 
 
 class LoggerUtils:

@@ -11,13 +11,13 @@ import yaml
 
 
 class ConfigUtils:
-    # @staticmethod
-    # def get_abs_path():
-    #     return os.getcwd().split("pytest")[0] + "pytest"
-
     @staticmethod
     def get_abs_path():
-        return "H:/pyProjects/learn/Interface_automation/pytest"
+        return os.getcwd()
+
+    # @staticmethod
+    # def get_abs_path():
+    #     return "H:/pyProjects/learn/Interface_automation/pytest"
 
     def get_logger_config(self):
         with open(self.get_abs_path() + "/config_yaml.yaml", mode="r", encoding="utf-8") as file:

@@ -8,9 +8,9 @@
 import allure
 import pytest
 
-from Interface_automation.pytest.testcase.commons.requests_utils import RequestsUtils
-from Interface_automation.pytest.testcase.commons.yaml_utils import get_testcase_yaml
-from Interface_automation.pytest.testcase.terminal_loading.tcs_custom import TcsCustomUtils
+from interface_automation.testcase.commons.requests_utils import RequestsUtils
+from interface_automation.testcase.commons.yaml_utils import get_testcase_yaml
+from interface_automation.testcase.terminal_loading.tcs_custom import TcsCustomUtils
 
 
 @allure.epic("陶朝盛-项目")

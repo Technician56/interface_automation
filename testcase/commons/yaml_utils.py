@@ -11,16 +11,16 @@ import traceback
 
 import yaml
 
-from Interface_automation.pytest.testcase.commons.logger_utils import error
-from Interface_automation.pytest.testcase.commons.parametrize_utils import ParametrizeUtils
+from interface_automation.testcase.commons.logger_utils import error
+from interface_automation.testcase.commons.parametrize_utils import ParametrizeUtils
+
+
+def get_object_path():
+    return os.getcwd()
 
 
 # def get_object_path():
-#     return os.getcwd().split("pytest")[0] + "pytest"
-
-def get_object_path():
-    return "H:/pyProjects/learn/Interface_automation/pytest"
-
+#     return "H:/pyProjects/learn/Interface_automation"
 
 
 def get_extract_yaml(key):

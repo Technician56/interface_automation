@@ -7,7 +7,7 @@
 # @file    :conftest.py
 import pytest
 
-from Interface_automation.pytest.testcase.commons.yaml_utils import clear_extract_yaml
+from interface_automation.testcase.commons.yaml_utils import clear_extract_yaml
 
 
 @pytest.fixture(scope="session", autouse=True)

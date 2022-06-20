@@ -5,7 +5,7 @@
     url: /cgi-bin/media/uploadimg?access_token=${get_extract_value(access_token)}
     method: post
     files:
-      media: "H://head.jpg"
+      media: "E://head.jpg"
   validate:
     - equals: { status_code: 200 }
     - contains: url
