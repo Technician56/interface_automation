@@ -1,0 +1,91 @@
+[ {
+  "uid" : "68528ee56e8e6561",
+  "name" : "test_create_tag[case_info0]",
+  "time" : {
+    "start" : 1655458681062,
+    "stop" : 1655458681193,
+    "duration" : 131
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9ebccce192be52f",
+  "name" : "test_sign[case_info0]",
+  "time" : {
+    "start" : 1655458680532,
+    "stop" : 1655458680765,
+    "duration" : 233
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c013bf442391f7fe",
+  "name" : "test_file_upload[case_info0]",
+  "time" : {
+    "start" : 1655458681430,
+    "stop" : 1655458681619,
+    "duration" : 189
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7ada83a88061ad16",
+  "name" : "test_get_tags[case_info0]",
+  "time" : {
+    "start" : 1655458680959,
+    "stop" : 1655458681059,
+    "duration" : 100
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9323d4f9163d0d1",
+  "name" : "test_sign[case_info1]",
+  "time" : {
+    "start" : 1655458680767,
+    "stop" : 1655458680795,
+    "duration" : 28
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fe74523f7c3b1c8b",
+  "name" : "test_get_access_token[case_info1]",
+  "time" : {
+    "start" : 1655458680926,
+    "stop" : 1655458680955,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a5f4b176ec5e2c5b",
+  "name" : "test_get_access_token[case_info0]",
+  "time" : {
+    "start" : 1655458680797,
+    "stop" : 1655458680919,
+    "duration" : 122
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d5de19e0d3569077",
+  "name" : "test_delete_tag[case_info0]",
+  "time" : {
+    "start" : 1655458681307,
+    "stop" : 1655458681428,
+    "duration" : 121
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "41052973cc24d531",
+  "name" : "test_edit_tag[case_info0]",
+  "time" : {
+    "start" : 1655458681194,
+    "stop" : 1655458681305,
+    "duration" : 111
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

@@ -1,0 +1,96 @@
+{
+  "uid" : "fe74523f7c3b1c8b",
+  "name" : "test_get_access_token[case_info1]",
+  "fullName" : "testcase.wechat_api.test_wechat_api.TestWechatApi#test_get_access_token",
+  "historyId" : "ea0c96d1f4b27287bb076070a5f71074",
+  "time" : {
+    "start" : 1655458680926,
+    "stop" : 1655458680955,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_extract",
+    "time" : {
+      "start" : 1655458680530,
+      "stop" : 1655458680530,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "991bf744acc928bd",
+      "name" : "log",
+      "source" : "991bf744acc928bd.txt",
+      "type" : "text/plain",
+      "size" : 1130
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "微信公众平台项目"
+  }, {
+    "name" : "epic",
+    "value" : "陶朝盛-项目"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase.wechat_api"
+  }, {
+    "name" : "suite",
+    "value" : "test_wechat_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestWechatApi"
+  }, {
+    "name" : "host",
+    "value" : "ChoosenMe"
+  }, {
+    "name" : "thread",
+    "value" : "11276-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.wechat_api.test_wechat_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case_info",
+    "value" : "{'name': 'appid为空', 'base_url': 'base_wechat_url', 'parametrize': {'name-grant_type-appid-secret-assert': './datas/wechat_api_datas/get_access_token_data.yaml'}, 'request': {'url': '/cgi-bin/token', 'method': 'get', 'params': {'grant_type': 'client_credential', 'appid': '', 'secret': '5a5615a2223e4295e9f4e153e2667b87'}}, 'extract': {'access_token': '\"access_token\":\"(.*?)\"', 'expires_in': '$.expires_in'}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 41002}]}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "fe74523f7c3b1c8b.json",
+  "parameterValues" : [ "{'name': 'appid为空', 'base_url': 'base_wechat_url', 'parametrize': {'name-grant_type-appid-secret-assert': './datas/wechat_api_datas/get_access_token_data.yaml'}, 'request': {'url': '/cgi-bin/token', 'method': 'get', 'params': {'grant_type': 'client_credential', 'appid': '', 'secret': '5a5615a2223e4295e9f4e153e2667b87'}}, 'extract': {'access_token': '\"access_token\":\"(.*?)\"', 'expires_in': '$.expires_in'}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 41002}]}" ]
+}

@@ -1,0 +1,17 @@
+INFO     logger:logger_utils.py:74 ------------------------------
+INFO     logger:logger_utils.py:74 用例 创建标签接口 开始
+INFO     logger:logger_utils.py:74 替换: ${get_extract_value(access_token)} ---> 57_vVHq9tRVudyNgzAq20FNfgqOuXIXAWG1Vj0-D2s_a7ZG5RjyJSO89noSXfaDHlawca0ELsiT1QuC5Nc1mEDTqB3TBJPunyi9gVgbBjVNul94A33nGi8dQdDQUXUaepr9EZ0fJl-LWOWtD4nfZHIgAHAKST
+INFO     logger:logger_utils.py:74 替换: ${get_random_number(1000,9999)} ---> 2709
+INFO     logger:logger_utils.py:74 ------开始发送接口请求------
+INFO     logger:logger_utils.py:74 请求方式: post
+INFO     logger:logger_utils.py:74 URL: https://api.weixin.qq.com/cgi-bin/tags/create?access_token=57_vVHq9tRVudyNgzAq20FNfgqOuXIXAWG1Vj0-D2s_a7ZG5RjyJSO89noSXfaDHlawca0ELsiT1QuC5Nc1mEDTqB3TBJPunyi9gVgbBjVNul94A33nGi8dQdDQUXUaepr9EZ0fJl-LWOWtD4nfZHIgAHAKST
+INFO     logger:logger_utils.py:74 请求参数:{'json': {'tag': {'name': '小帅哥2709'}}}
+INFO     logger:logger_utils.py:74 请求结束-->
+实际结果--> {"tag":{"id":584,"name":"\\u5c0f\\u5e05\\u54e52709"}}
+INFO     logger:logger_utils.py:74 替换: ${get_extract_value(id)} ---> 584
+INFO     logger:logger_utils.py:74 ------断言开始------
+INFO     logger:logger_utils.py:74 状态断言成功: 状态码status_code 等于 200
+INFO     logger:logger_utils.py:74 业务断言成功: id 等于 584
+INFO     logger:logger_utils.py:74 ------断言结束------
+INFO     logger:logger_utils.py:74 用例 创建标签接口 结束
+INFO     logger:logger_utils.py:74 ------断言通过------

@@ -1,0 +1,96 @@
+{
+  "uid" : "d5de19e0d3569077",
+  "name" : "test_delete_tag[case_info0]",
+  "fullName" : "testcase.wechat_api.test_wechat_api.TestWechatApi#test_delete_tag",
+  "historyId" : "fce6f25d436ef23246c5740325449b5e",
+  "time" : {
+    "start" : 1655458681307,
+    "stop" : 1655458681428,
+    "duration" : 121
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_extract",
+    "time" : {
+      "start" : 1655458680530,
+      "stop" : 1655458680530,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "90570bbb92728f88",
+      "name" : "log",
+      "source" : "90570bbb92728f88.txt",
+      "type" : "text/plain",
+      "size" : 1415
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "微信公众平台项目"
+  }, {
+    "name" : "epic",
+    "value" : "陶朝盛-项目"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase.wechat_api"
+  }, {
+    "name" : "suite",
+    "value" : "test_wechat_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestWechatApi"
+  }, {
+    "name" : "host",
+    "value" : "ChoosenMe"
+  }, {
+    "name" : "thread",
+    "value" : "11276-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.wechat_api.test_wechat_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case_info",
+    "value" : "{'name': '删除标签接口', 'base_url': 'base_wechat_url', 'request': {'url': '/cgi-bin/tags/delete?access_token=${get_extract_value(access_token)}', 'method': 'post', 'json': {'tag': {'id': '${get_extract_value(id)}'}}}, 'validate': [{'equals': {'status_code': 200}}, {'equals': {'errmsg': 'ok'}}]}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d5de19e0d3569077.json",
+  "parameterValues" : [ "{'name': '删除标签接口', 'base_url': 'base_wechat_url', 'request': {'url': '/cgi-bin/tags/delete?access_token=${get_extract_value(access_token)}', 'method': 'post', 'json': {'tag': {'id': '${get_extract_value(id)}'}}}, 'validate': [{'equals': {'status_code': 200}}, {'equals': {'errmsg': 'ok'}}]}" ]
+}

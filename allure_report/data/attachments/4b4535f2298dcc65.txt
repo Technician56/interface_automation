@@ -1,0 +1,14 @@
+INFO     logger:logger_utils.py:74 ------------------------------
+INFO     logger:logger_utils.py:74 用例 appid为空 开始
+INFO     logger:logger_utils.py:74 ------开始发送接口请求------
+INFO     logger:logger_utils.py:74 请求方式: get
+INFO     logger:logger_utils.py:74 URL: https://api.weixin.qq.com/cgi-bin/token?a=1&b=2
+INFO     logger:logger_utils.py:74 请求参数:{'params': {'grant_type': 'client_credential', 'appid': '', 'secret': '5a5615a2223e4295e9f4e153e2667b87'}, 'headers': {'sign': '34751C19C6578F6B0DA11D8AD4BC062B'}}
+INFO     logger:logger_utils.py:74 请求结束-->
+实际结果--> {"errcode":41002,"errmsg":"appid missing rid: 62ac4b79-43267662-2f5b1c29"}
+INFO     logger:logger_utils.py:74 ------断言开始------
+INFO     logger:logger_utils.py:74 状态断言成功: 状态码status_code 等于 200
+INFO     logger:logger_utils.py:74 断言成功: 实际结果中存在:41002  --> 实际结果: {'errcode': 41002, 'errmsg': 'appid missing rid: 62ac4b79-43267662-2f5b1c29'}
+INFO     logger:logger_utils.py:74 ------断言结束------
+INFO     logger:logger_utils.py:74 用例 appid为空 结束
+INFO     logger:logger_utils.py:74 ------断言通过------

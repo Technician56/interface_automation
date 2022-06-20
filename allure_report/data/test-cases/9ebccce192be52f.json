@@ -1,0 +1,90 @@
+{
+  "uid" : "9ebccce192be52f",
+  "name" : "test_sign[case_info0]",
+  "fullName" : "testcase.encryption.test_encryption.TestEncryption#test_sign",
+  "historyId" : "e5b2b8a10254acff0a95ed547ac7f064",
+  "time" : {
+    "start" : 1655458680532,
+    "stop" : 1655458680765,
+    "duration" : 233
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_extract",
+    "time" : {
+      "start" : 1655458680530,
+      "stop" : 1655458680530,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "69ea3a3766d4a8e1",
+      "name" : "log",
+      "source" : "69ea3a3766d4a8e1.txt",
+      "type" : "text/plain",
+      "size" : 1504
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "testcase.encryption"
+  }, {
+    "name" : "suite",
+    "value" : "test_encryption"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestEncryption"
+  }, {
+    "name" : "host",
+    "value" : "ChoosenMe"
+  }, {
+    "name" : "thread",
+    "value" : "11276-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.encryption.test_encryption"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case_info",
+    "value" : "{'name': '获取鉴权码access token接口', 'base_url': 'base_wechat_url', 'parametrize': {'name-grant_type-appid-secret-assert': './datas/sign_api_datas/sign_data.yaml'}, 'request': {'url': '/cgi-bin/token?a=1&b=2', 'method': 'get', 'params': {'grant_type': 'client_credential', 'appid': 'wx1d369be0180ad357', 'secret': '5a5615a2223e4295e9f4e153e2667b87'}, 'headers': {'sign': ''}}, 'extract': {'access_token': '\"access_token\":\"(.*?)\"', 'expires_in': '$.expires_in'}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 'access_token'}]}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9ebccce192be52f.json",
+  "parameterValues" : [ "{'name': '获取鉴权码access token接口', 'base_url': 'base_wechat_url', 'parametrize': {'name-grant_type-appid-secret-assert': './datas/sign_api_datas/sign_data.yaml'}, 'request': {'url': '/cgi-bin/token?a=1&b=2', 'method': 'get', 'params': {'grant_type': 'client_credential', 'appid': 'wx1d369be0180ad357', 'secret': '5a5615a2223e4295e9f4e153e2667b87'}, 'headers': {'sign': ''}}, 'extract': {'access_token': '\"access_token\":\"(.*?)\"', 'expires_in': '$.expires_in'}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 'access_token'}]}" ]
+}

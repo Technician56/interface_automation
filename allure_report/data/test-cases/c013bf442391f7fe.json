@@ -1,0 +1,96 @@
+{
+  "uid" : "c013bf442391f7fe",
+  "name" : "test_file_upload[case_info0]",
+  "fullName" : "testcase.wechat_api.test_wechat_api.TestWechatApi#test_file_upload",
+  "historyId" : "a603832130a34ef7ea269c3bce3f2365",
+  "time" : {
+    "start" : 1655458681430,
+    "stop" : 1655458681619,
+    "duration" : 189
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_extract",
+    "time" : {
+      "start" : 1655458680530,
+      "stop" : 1655458680530,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "2b6db03d7de9329c",
+      "name" : "log",
+      "source" : "2b6db03d7de9329c.txt",
+      "type" : "text/plain",
+      "size" : 1644
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "微信公众平台项目"
+  }, {
+    "name" : "epic",
+    "value" : "陶朝盛-项目"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase.wechat_api"
+  }, {
+    "name" : "suite",
+    "value" : "test_wechat_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestWechatApi"
+  }, {
+    "name" : "host",
+    "value" : "ChoosenMe"
+  }, {
+    "name" : "thread",
+    "value" : "11276-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.wechat_api.test_wechat_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case_info",
+    "value" : "{'name': '文件上传接口', 'base_url': 'base_wechat_url', 'request': {'url': '/cgi-bin/media/uploadimg?access_token=${get_extract_value(access_token)}', 'method': 'post', 'files': {'media': 'E://head.jpg'}}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 'url'}]}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c013bf442391f7fe.json",
+  "parameterValues" : [ "{'name': '文件上传接口', 'base_url': 'base_wechat_url', 'request': {'url': '/cgi-bin/media/uploadimg?access_token=${get_extract_value(access_token)}', 'method': 'post', 'files': {'media': 'E://head.jpg'}}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 'url'}]}" ]
+}

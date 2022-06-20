@@ -1,0 +1,96 @@
+{
+  "uid" : "7ada83a88061ad16",
+  "name" : "test_get_tags[case_info0]",
+  "fullName" : "testcase.wechat_api.test_wechat_api.TestWechatApi#test_get_tags",
+  "historyId" : "67fb9dac07fbd533ef9f9364e87edb8b",
+  "time" : {
+    "start" : 1655458680959,
+    "stop" : 1655458681059,
+    "duration" : 100
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_extract",
+    "time" : {
+      "start" : 1655458680530,
+      "stop" : 1655458680530,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "79ed72166acf3edf",
+      "name" : "log",
+      "source" : "79ed72166acf3edf.txt",
+      "type" : "text/plain",
+      "size" : 11885
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "微信公众平台项目"
+  }, {
+    "name" : "epic",
+    "value" : "陶朝盛-项目"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase.wechat_api"
+  }, {
+    "name" : "suite",
+    "value" : "test_wechat_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestWechatApi"
+  }, {
+    "name" : "host",
+    "value" : "ChoosenMe"
+  }, {
+    "name" : "thread",
+    "value" : "11276-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.wechat_api.test_wechat_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case_info",
+    "value" : "{'name': '获取公众号已创建的标签接口', 'base_url': 'base_wechat_url', 'request': {'url': '/cgi-bin/tags/get?access_token=${get_extract_value(access_token)}', 'method': 'get'}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 'tags'}]}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7ada83a88061ad16.json",
+  "parameterValues" : [ "{'name': '获取公众号已创建的标签接口', 'base_url': 'base_wechat_url', 'request': {'url': '/cgi-bin/tags/get?access_token=${get_extract_value(access_token)}', 'method': 'get'}, 'validate': [{'equals': {'status_code': 200}}, {'contains': 'tags'}]}" ]
+}

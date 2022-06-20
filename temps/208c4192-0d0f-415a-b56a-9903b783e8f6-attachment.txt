@@ -1,0 +1,14 @@
+INFO     logger:logger_utils.py:74 ------------------------------
+INFO     logger:logger_utils.py:74 用例 获取鉴权码access token接口 开始
+INFO     logger:logger_utils.py:74 ------开始发送接口请求------
+INFO     logger:logger_utils.py:74 请求方式: get
+INFO     logger:logger_utils.py:74 URL: https://api.weixin.qq.com/cgi-bin/token
+INFO     logger:logger_utils.py:74 请求参数:{'params': {'grant_type': 'client_credential', 'appid': 'wx1d369be0180ad357', 'secret': '5a5615a2223e4295e9f4e153e2667b87'}}
+INFO     logger:logger_utils.py:74 请求结束-->
+实际结果--> {"access_token":"57_vVHq9tRVudyNgzAq20FNfgqOuXIXAWG1Vj0-D2s_a7ZG5RjyJSO89noSXfaDHlawca0ELsiT1QuC5Nc1mEDTqB3TBJPunyi9gVgbBjVNul94A33nGi8dQdDQUXUaepr9EZ0fJl-LWOWtD4nfZHIgAHAKST","expires_in":7200}
+INFO     logger:logger_utils.py:74 ------断言开始------
+INFO     logger:logger_utils.py:74 状态断言成功: 状态码status_code 等于 200
+INFO     logger:logger_utils.py:74 断言成功: 实际结果中存在:access_token  --> 实际结果: {'access_token': '57_vVHq9tRVudyNgzAq20FNfgqOuXIXAWG1Vj0-D2s_a7ZG5RjyJSO89noSXfaDHlawca0ELsiT1QuC5Nc1mEDTqB3TBJPunyi9gVgbBjVNul94A33nGi8dQdDQUXUaepr9EZ0fJl-LWOWtD4nfZHIgAHAKST', 'expires_in': 7200}
+INFO     logger:logger_utils.py:74 ------断言结束------
+INFO     logger:logger_utils.py:74 用例 获取鉴权码access token接口 结束
+INFO     logger:logger_utils.py:74 ------断言通过------
